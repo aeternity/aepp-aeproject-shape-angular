@@ -1,0 +1,31 @@
+<div>
+    <div *ngIf="!runningInFrame" class="">
+        <div class="wallet-details">
+            <h1 class="">Wallet Aepp</h1>
+
+            <div class="border">
+                <div class="">
+                    <div class="">
+                        <span class="wallet-details-label">Public Key:</span> {{pub}}
+                    </div>
+                </div>
+                <div *ngIf="height" class="">
+                    <div class="p-2 w-1/4">
+                        <span class="wallet-details-label">Height:</span> {{height}}
+                    </div>
+                </div>
+                <div v-if="height" class="">
+                    <div class="p-2 w-1/4">
+                        <span class="wallet-details-label">Balance:</span> {{balance}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="!aeppUrl" class="">
+            Loading Aepp...
+        </div>
+        <!-- external app -->
+        <iframe *ngIf="aeppUrl" #aepp class="" src="about:blank" frameborder="1"></iframe>
+    </div>
+</div>

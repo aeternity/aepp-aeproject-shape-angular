@@ -1,0 +1,7 @@
+<div class="container">
+  <app-header></app-header>
+  <div [hidden]="!isLoading">
+    <mat-spinner id="spinner"></mat-spinner>
+  </div>
+  <todo-list disableTodos="isLoading"></todo-list>
+</div>
