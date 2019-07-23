@@ -1,27 +1,58 @@
-# IdentityProvider
+# aepp-forgae-shape-angular
+This project presents ready to use aepp with predefined **Angular.js** front-end framework and **forgae** integration.
+The provided boilerplate code contains all modules and settings needed to facilitate its usage - Angular.js project created by angular cli, a Sophia smart contract and scripts for deployment on the Blockchain.
+It gives a helpful code scaffolding for further forgae project development and shows examples how to read and record a data on the Blockchain through the browser.
+The aepp represents a smart contract that manages a ToDo List and enables interaction with each ToDo's status. It uses a local node spawned by forgae and one of the default forgae account to sign transactions. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+Please follow the steps bellow:
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Forgae installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+First you need to install **[forgae](https://github.com/aeternity/aepp-forgae-js)** (if it is installed already, skip this step).
+```
+    npm install -g forgae
+```
 
-## Build
+## Download the angular shape
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+In a new empty folder run the following command:
 
-## Running unit tests
+```
+    forgae shape angular
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Now a tidy structured project must have been shaped. 
 
-## Running end-to-end tests
+## Run a local node
+Next step is to build a local aeternity node:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+    forgae node
+```
 
-## Further help
+## Deploy the contract
+Let's deploy the contract:
+```
+    forgae deploy
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Copy the deployed contract address
+
+```
+    forgae history
+```
+Copy the address of the contract that is shown as a Result in the report table.
+
+## Apply the deployed contract address
+
+Assign the deployed contract address(above step) to the `contractAddress` property in `src/contractDetails.js` file.
+Now we are ready to run the aepp.
+
+```
+    cd aepp-forgae-shape-angular
+    npm run serve
+```
+
+*By default the front-end app running at: Local:   http://localhost:8080/*
