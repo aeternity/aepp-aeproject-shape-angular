@@ -12,19 +12,19 @@
   "private": true,
   "dependencies": {
     "@aeternity/aepp-sdk": "git://github.com/aeternity/aepp-sdk-js.git#develop",
-    "@angular-devkit/build-angular": "^0.801.2",
-    "@angular/animations": "^8.1.2",
+    "@angular-devkit/build-angular": "^0.802.1",
+    "@angular/animations": "^8.2.2",
     "@angular/cdk": "^8.1.1",
-    "@angular/common": "~8.1.2",
-    "@angular/compiler": "~8.1.2",
-    "@angular/core": "^8.1.2",
-    "@angular/forms": "~8.1.2",
+    "@angular/common": "~8.2.2",
+    "@angular/compiler": "~8.2.2",
+    "@angular/core": "^8.2.2",
+    "@angular/forms": "~8.2.2",
     "@angular/http": "~7.0.0",
     "@angular/material": "^8.1.1",
-    "@angular/platform-browser": "~8.1.2",
-    "@angular/platform-browser-dynamic": "~8.1.2",
+    "@angular/platform-browser": "~8.2.2",
+    "@angular/platform-browser-dynamic": "~8.2.2",
     "@angular/pwa": "0.7.0",
-    "@angular/router": "~8.1.2",
+    "@angular/router": "~8.2.2",
     "angular-autofocus-fix": "^0.1.0",
     "core-js": "^2.5.4",
     "mobx": "^5.13.0",
@@ -32,9 +32,9 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular/cli": "~8.1.2",
-    "@angular/compiler-cli": "~8.1.2",
-    "@angular/language-service": "~8.1.2",
+    "@angular/cli": "~8.2.1",
+    "@angular/compiler-cli": "~8.2.2",
+    "@angular/language-service": "~8.2.2",
     "@schematics/angular": "^7.0.6",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -50,6 +50,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.4.5"
+    "typescript": "~3.5.3"
   }
 }

@@ -12,20 +12,6 @@ import account from '../../account';
 export class HomeComponent implements OnInit {
   @ViewChild('aepp', { static: false }) aepp: ElementRef;
 
-    // Testnet config
-    // runningInFrame: window.parent !== window,
-    // pub: 'ak_6A2vcm1Sz6aqJezkLCssUXcyZTX7X8D5UwbuS2fRJr9KkYpRU', // Your public key
-    // priv: 'a7a695f999b1872acb13d5b63a830a8ee060ba688a478a08c6e65dfad8a01cd70bb4ed7927f97b51e1bcb5e1340d12335b2a2b12c8bc5221d63c4bcb39d41e61', // Your private key
-    // client: null,
-    // balance: null,
-    // height: null,
-    // url: 'https://sdk-testnet.aepps.com/',
-    // internalUrl: 'https://sdk-testnet.aepps.com/',
-    // compilerUrl: 'https://compiler.aepps.com',
-    // aeppUrl: '//0.0.0.0:8081'
-
-    // Local config
-
     runningInFrame = window.parent !== window;
     pub = account.pub; // Your public key
     priv = account.priv; // Your private key
