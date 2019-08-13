@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { computed } from "mobx";
 import { Todo } from '../../interfaces/todo';
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -68,17 +68,12 @@ export class TodoListComponent implements OnInit {
   contractInstance: any;
   client: any;
   localClient: any;
-  localContractInstance: any;
 
-  constructor(public globalStore: GlobalStore, private cd: ChangeDetectorRef) {
+  constructor(public globalStore: GlobalStore) {
     globalStore.data.subscribe((data: State) => {
       this.todos = data.toDos;
       this.disableTodos = !data.isLoading
     })
-  }
-
-  ngDoCheck() {
-    this.cd.markForCheck()
   }
 
   async ngOnInit() {
@@ -92,7 +87,6 @@ export class TodoListComponent implements OnInit {
     this.globalStore.toggleLoading()
 
     await this.getClient();
-    // await this.localGetClient(this.Universal, this.config, this.config.ownerKeyPair);
     await this.getContractTasks();
     
     this.globalStore.toggleLoading()
@@ -242,12 +236,9 @@ export class TodoListComponent implements OnInit {
   }
 
   async getContractTasks() {
-
     const allToDosResponse : any = await this.contractInstance.call("get_todos", []);
     const allToDos = await allToDosResponse.decode();
     const parsedToDos = this.convertSophiaListToTodos(allToDos);
-
-    
     this.globalStore.setToDos(parsedToDos);
   }
 
