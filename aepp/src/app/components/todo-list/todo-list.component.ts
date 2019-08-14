@@ -67,7 +67,6 @@ export class TodoListComponent implements OnInit {
   };
   contractInstance: any;
   client: any;
-  localClient: any;
 
   constructor(public globalStore: GlobalStore) {
     globalStore.data.subscribe((data: State) => {
