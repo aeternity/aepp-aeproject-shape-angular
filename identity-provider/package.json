@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@aeternity/aepp-sdk": "git://github.com/aeternity/aepp-sdk-js.git#develop",
+    "@aeternity/aepp-sdk": "4.5.0",
     "@angular-devkit/build-angular": "^0.802.1",
     "@angular/animations": "~8.2.2",
     "@angular/common": "~8.2.2",
