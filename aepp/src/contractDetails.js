@@ -72,7 +72,7 @@ export default {
   
       result
   
-    entrypoint get_todos() : list((int, todo)) = 
+    entrypoint get_todos() = 
       
       let user_todos = Map.lookup_default(Call.caller, state.map_user_todos, {})
       let todos = Map.to_list(user_todos)

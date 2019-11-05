@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@aeternity/aepp-sdk": "4.5.0",
+    "@aeternity/aepp-sdk": "6.0.0",
     "@angular-devkit/build-angular": "^0.802.1",
     "@angular/animations": "^8.2.2",
     "@angular/cdk": "^8.1.1",
